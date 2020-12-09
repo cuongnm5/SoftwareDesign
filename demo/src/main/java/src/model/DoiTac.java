@@ -67,6 +67,14 @@ public class DoiTac {
         return ngaySinh;
     }
 
+    public DoiTac(String SDT, String email, HoTen hoTen, DiaChi diaChi, Date ngaySinh) {
+        this.SDT = SDT;
+        this.email = email;
+        this.hoTen = hoTen;
+        this.diaChi = diaChi;
+        this.ngaySinh = ngaySinh;
+    }
+
     public DoiTac(int id, String SDT, String email, HoTen hoTen, DiaChi diaChi, Date ngaySinh) {
         this.id = id;
         this.SDT = SDT;
@@ -74,6 +82,18 @@ public class DoiTac {
         this.hoTen = hoTen;
         this.diaChi = diaChi;
         this.ngaySinh = ngaySinh;
+    }
+
+    public DoiTac(String SDT, String email, HoTen hoTen, Date ngaySinh) {
+        this.SDT = SDT;
+        this.email = email;
+        this.hoTen = hoTen;
+        this.ngaySinh = ngaySinh;
+    }
+
+    @Override
+    public String toString() {
+        return "DoiTac{" + "id=" + id + ", SDT=" + SDT + ", email=" + email + ", ngaySinh=" + ngaySinh + '}';
     }
 
     public DoiTac() {

@@ -22,6 +22,17 @@ public class HoTen {
         this.id = id;
     }
 
+    public HoTen(String tenDem, String ten, String ho) {
+        this.tenDem = tenDem;
+        this.ten = ten;
+        this.ho = ho;
+    }
+
+    @Override
+    public String toString() {
+        return "HoTen{" + "id=" + id + ", tenDem=" + tenDem + ", ten=" + ten + ", ho=" + ho + '}';
+    }
+
     public void setId(int id) {
         this.id = id;
     }

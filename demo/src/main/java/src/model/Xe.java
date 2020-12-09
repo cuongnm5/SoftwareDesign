@@ -14,6 +14,14 @@ public class Xe {
     private String tenHang;
     private String loai;
     private String namSX;
+
+    public Xe(String tenHang, String loai, String namSX, String soDangKy, String bienSoXe) {
+        this.tenHang = tenHang;
+        this.loai = loai;
+        this.namSX = namSX;
+        this.soDangKy = soDangKy;
+        this.bienSoXe = bienSoXe;
+    }
     private String soDangKy;
     private String bienSoXe;
 
@@ -24,6 +32,10 @@ public class Xe {
         this.namSX = namSX;
         this.soDangKy = soDangKy;
         this.bienSoXe = bienSoXe;
+    }
+
+    public Xe() {
+        
     }
 
     public int getId() {
@@ -72,6 +84,11 @@ public class Xe {
 
     public void setBienSoXe(String bienSoXe) {
         this.bienSoXe = bienSoXe;
+    }
+
+    @Override
+    public String toString() {
+        return "Xe{" + "id=" + id + ", tenHang=" + tenHang + ", loai=" + loai + ", namSX=" + namSX + ", soDangKy=" + soDangKy + ", bienSoXe=" + bienSoXe + '}';
     }
     
     

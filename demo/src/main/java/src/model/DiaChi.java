@@ -17,6 +17,14 @@ public class DiaChi {
     private String quanHuyen;
     private String tinhThanh;
 
+    public DiaChi(int id, String soNha, String phuongXa, String quanHuyen, String tinhThanh) {
+        this.id = id;
+        this.soNha = soNha;
+        this.phuongXa = phuongXa;
+        this.quanHuyen = quanHuyen;
+        this.tinhThanh = tinhThanh;
+    }
+
     public DiaChi(int id, String soNha, String toaNha, String phuongXa, String quanHuyen, String tinhThanh) {
         this.id = id;
         this.soNha = soNha;
@@ -24,6 +32,18 @@ public class DiaChi {
         this.phuongXa = phuongXa;
         this.quanHuyen = quanHuyen;
         this.tinhThanh = tinhThanh;
+    }
+
+    public DiaChi(String soNha, String phuongXa, String quanHuyen, String tinhThanh) {
+        this.soNha = soNha;
+        this.phuongXa = phuongXa;
+        this.quanHuyen = quanHuyen;
+        this.tinhThanh = tinhThanh;
+    }
+
+    @Override
+    public String toString() {
+        return "DiaChi{" + "id=" + id + ", soNha=" + soNha + ", toaNha=" + toaNha + ", phuongXa=" + phuongXa + ", quanHuyen=" + quanHuyen + ", tinhThanh=" + tinhThanh + '}';
     }
 
     public DiaChi() {

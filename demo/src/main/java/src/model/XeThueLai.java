@@ -16,6 +16,13 @@ public class XeThueLai {
     private Date ngayBatDau;
     private Date ngayKetThuc;
     private float giaThue;
+
+    public XeThueLai(Date ngayBatDau, Date ngayKetThuc, float giaThue, Xe xe) {
+        this.ngayBatDau = ngayBatDau;
+        this.ngayKetThuc = ngayKetThuc;
+        this.giaThue = giaThue;
+        this.xe = xe;
+    }
     private Xe xe;
 
     public XeThueLai(int id, Date ngayBatDau, Date ngayKetThuc, float giaThue, Xe xe) {
@@ -24,6 +31,10 @@ public class XeThueLai {
         this.ngayKetThuc = ngayKetThuc;
         this.giaThue = giaThue;
         this.xe = xe;
+    }
+
+    public XeThueLai() {
+        
     }
 
     public int getId() {

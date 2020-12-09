@@ -41,6 +41,13 @@ public class ThanhVien {
         this.vaitro = vaitro;
         this.ngaySinh = ngaySinh;
     }
+
+    public ThanhVien(String username, String password, int id, HoTen hoTen) {
+        this.username = username;
+        this.password = password;
+        this.id = id;
+        this.hoTen = hoTen;
+    }
     
     public ThanhVien() {
     }

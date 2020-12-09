@@ -16,15 +16,15 @@
  
     ThanhVienDAO dao = new ThanhVienDAO();
     boolean kq = dao.ktraDangNhap(tv);
-     
-    if(kq && (tv.getVaitro().equalsIgnoreCase("NVQL"))){
-        session.setAttribute("NVQL", tv);
+    ThanhVien thanhVien = dao.getThanhVien(username); 
+    if(kq && (thanhVien.getVaitro().equalsIgnoreCase("nvql"))){
+        session.setAttribute("nvql", thanhVien);
         response.sendRedirect("nvql\\gdChinhNVQL.jsp");
-    }else if(kq &&(tv.getVaitro().equalsIgnoreCase("LT"))){
-        session.setAttribute("LT", tv);
+    }else if(kq &&(thanhVien.getVaitro().equalsIgnoreCase("letan"))){
+        session.setAttribute("letan", thanhVien);
         response.sendRedirect("letan\\gdChinhLeTan.jsp");
-    }else if(kq &&(tv.getVaitro().equalsIgnoreCase("NVTN"))){
-        session.setAttribute("NVTN", tv);
+    }else if(kq &&(thanhVien.getVaitro().equalsIgnoreCase("nvtn"))){
+        session.setAttribute("nvtn", thanhVien);
         response.sendRedirect("nvtn\\gdChinhNVTN.jsp");
     }else{
         response.sendRedirect("gdDangNhap.jsp?err=fail");

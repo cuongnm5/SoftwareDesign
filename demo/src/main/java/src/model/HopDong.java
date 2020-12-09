@@ -6,6 +6,7 @@
 package src.model;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,11 +18,28 @@ public class HopDong {
     private String noiDung;
     private String moTa;
     private String thongTinThanhToan;
-    private XeThueLai[] listXeThueLai;
-    private DoiTac doiTac;
-    private LeTan leTan;
+    private String trangThai;
 
-    public HopDong(int id, Date ngayTao, String noiDung, String moTa, String thongTinThanhToan, XeThueLai[] listXeThueLai, DoiTac doiTac, LeTan leTan) {
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+
+    public String getTrangThai() {
+        return trangThai;
+    }
+    private ArrayList<XeThueLai> listXeThueLai;
+    private DoiTac doiTac;
+    private ThanhVien leTan;
+
+    public HopDong(Date ngayTao, String thongTinThanhToan, ArrayList<XeThueLai> listXeThueLai, DoiTac doiTac, ThanhVien leTan) {
+        this.ngayTao = ngayTao;
+        this.thongTinThanhToan = thongTinThanhToan;
+        this.listXeThueLai = listXeThueLai;
+        this.doiTac = doiTac;
+        this.leTan = leTan;
+    }
+
+    public HopDong(int id, Date ngayTao, String noiDung, String moTa, String thongTinThanhToan, ArrayList<XeThueLai> listXeThueLai, DoiTac doiTac, ThanhVien leTan) {
         this.id = id;
         this.ngayTao = ngayTao;
         this.noiDung = noiDung;
@@ -30,6 +48,10 @@ public class HopDong {
         this.listXeThueLai = listXeThueLai;
         this.doiTac = doiTac;
         this.leTan = leTan;
+    }
+
+    public HopDong() {
+        
     }
 
     public void setId(int id) {
@@ -52,7 +74,7 @@ public class HopDong {
         this.thongTinThanhToan = thongTinThanhToan;
     }
 
-    public void setListXeThueLai(XeThueLai[] listXeThueLai) {
+    public void setListXeThueLai(ArrayList<XeThueLai> listXeThueLai) {
         this.listXeThueLai = listXeThueLai;
     }
 
@@ -60,7 +82,7 @@ public class HopDong {
         this.doiTac = doiTac;
     }
 
-    public void setLeTan(LeTan leTan) {
+    public void setLeTan(ThanhVien leTan) {
         this.leTan = leTan;
     }
 
@@ -84,7 +106,7 @@ public class HopDong {
         return thongTinThanhToan;
     }
 
-    public XeThueLai[] getListXeThueLai() {
+    public ArrayList<XeThueLai> getListXeThueLai() {
         return listXeThueLai;
     }
 
@@ -92,7 +114,7 @@ public class HopDong {
         return doiTac;
     }
 
-    public LeTan getLeTan() {
+    public ThanhVien getLeTan() {
         return leTan;
     }
     

@@ -17,11 +17,20 @@ public class HoaDon {
     private String moTa;
     private Date thoiGianThanhToan;
     private HopDong hopDong;
-    private NhanVienThuNgan thuNgan;
+    private ThanhVien thuNgan;
     private String billPath;
     private DoiTac doiTac;
 
-    public HoaDon(int id, float giaTien, String moTa, Date thoiGianThanhToan, HopDong hopDong, NhanVienThuNgan thuNgan, String billPath, DoiTac doiTac) {
+    public HoaDon(float giaTien, Date thoiGianThanhToan, HopDong hopDong, ThanhVien thuNgan, String billPath, DoiTac doiTac) {
+        this.giaTien = giaTien;
+        this.thoiGianThanhToan = thoiGianThanhToan;
+        this.hopDong = hopDong;
+        this.thuNgan = thuNgan;
+        this.billPath = billPath;
+        this.doiTac = doiTac;
+    }
+
+    public HoaDon(int id, float giaTien, String moTa, Date thoiGianThanhToan, HopDong hopDong, ThanhVien thuNgan, String billPath, DoiTac doiTac) {
         this.id = id;
         this.giaTien = giaTien;
         this.moTa = moTa;
@@ -52,7 +61,7 @@ public class HoaDon {
         return hopDong;
     }
 
-    public NhanVienThuNgan getThuNgan() {
+    public ThanhVien getThuNgan() {
         return thuNgan;
     }
 
@@ -84,7 +93,7 @@ public class HoaDon {
         this.hopDong = hopDong;
     }
 
-    public void setThuNgan(NhanVienThuNgan thuNgan) {
+    public void setThuNgan(ThanhVien thuNgan) {
         this.thuNgan = thuNgan;
     }
 

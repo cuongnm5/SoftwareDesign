@@ -23,6 +23,7 @@ public class DAO {
            try {
                Class.forName(dbClass);
                con = DriverManager.getConnection(dbUrl, "root", "root");
+               System.out.println("Success connect sql!!");
            } catch (Exception ex) {
                ex.printStackTrace();
            }
